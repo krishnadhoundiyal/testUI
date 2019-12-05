@@ -11,14 +11,14 @@
    
   },
   "profile":{
-  "sakila": {
+  "information": {
     "tabview1": [
       "actor_id", 
       "first_name", 
       "last_name", 
       "last_update"
     ],
-    "tabview2" : [
+    "system" : [
        "actor_id", 
       "first_name", 
       "last_name", 
