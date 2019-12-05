@@ -10,7 +10,41 @@
     "salika" : ["tabview1","tabview2","tabview3","tabview4"]
    
   },
-  "profile": {
-    "name": "typicode"
+  "profile":{
+  "sakila": {
+    "tabview1": [
+      "actor_id", 
+      "first_name", 
+      "last_name", 
+      "last_update"
+    ],
+    "tabview2" : [
+       "actor_id", 
+      "first_name", 
+      "last_name", 
+      "last_update"
+      ]
+  }, 
+  "ui": {
+    "tabview2": [
+      "idquery", 
+      "query_name", 
+      "query_string", 
+      "where_clause", 
+      "created_at", 
+      "updated_at"
+    ], 
+    "saved_queries": [
+      "id", 
+      "select", 
+      "where", 
+      "from", 
+      "group_by", 
+      "alias", 
+      "created_at", 
+      "updated_at", 
+      "user_id"
+    ]
   }
+}
 }
