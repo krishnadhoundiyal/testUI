@@ -1,17 +1,17 @@
 {
-	"posts": [
-		"db1553610437720",
-		"xgeomanager_control",
+	'posts': [
+		'db1553610437720',
+		'xgeomanager_control',
 
 	],
-	"Tables": {
-		'db1553610437720': ["ct_time_periods", "b_sector_4g", "b_nodeb_4g"],
-		"xgeomanager_control": ["measurement_period", 'request', 'relation_measurementperiod_processserver', 'process_server'],
+	'Tables': {
+		'db1553610437720': ['ct_time_periods', 'b_sector_4g', 'b_nodeb_4g'],
+		'xgeomanager_control': ['measurement_period', 'request', 'relation_measurementperiod_processserver', 'process_server'],
 
 
 	},
-	"profile": {
-		"db1553610437720": {
+	'profile': {
+		'db1553610437720': {
 			'ct_time_periods': [
 				['rnc_id', 'int(19)'],
 				['time_stamp_start', 'datetime'],
@@ -46,8 +46,8 @@
 
 			]
 		},
-		"xgeomanager_control": {
-			"measurement_period": [
+		'xgeomanager_control': {
+			'measurement_period': [
 				['ID', 'int(11)'],
 				['NAME', 'varchar(30)'],
 				['DISPLAYNAME', 'varchar(80)'],
