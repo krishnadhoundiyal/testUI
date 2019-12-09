@@ -5,7 +5,7 @@
             "salika"
   ],
   "Tables": {
-    "information" : ["system","someTable","valency","diaphragm"],
+    "information" : ["system","someTable","tabview1","diaphragm"],
     "test_db" : ["test1","test2","test34"],
     "salika" : ["tabview1","tabview2","tabview3","tabview4"]
    
