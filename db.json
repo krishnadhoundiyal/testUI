@@ -1,110 +1,213 @@
 {
-	"posts": ["db1553610437720", "xgeomanager_control"],
-	"Tables": {
-		"db1553610437720": ["ct_time_periods", "b_sector_4g", "b_nodeb_4g"],
-		"xgeomanager_control": ["measurement_period", "request", "relation_measurementperiod_processserver", "process_server"]
-	},
-	"profile": {
-		"db1553610437720": {
-			"ct_time_periods": [
-				["rnc_id", "int(19)"],
-				["time_stamp_start", "datetime"],
-				["time_stamp_stop", "datetime"],
-				["request_id", "int(11)"],
-				["subnetwork_id", "int(11)"],
-				["network_id", "int(11)"],
-				["technology", "varchar(30)"],
-				["vendor", "varchar(30)"],
-				["gen_id", "varchar(100)"]
-
-			],
-			"b_sector_4g": [
-				["id", "int(19)"],
-				["nodeb_id", "int(19)"],
-				["subnetwork_id", "int(19)"],
-				["name", "varchar(100)"],
-				["vendor", "varchar(30)"],
-				["latitude", "double"],
-				["longitude", "double"],
-				["azimuth", "smallint(9)"],
-				["gen_id", "varchar(512)"],
-				["beamwidth", "float"],
-				["plmn", "int(11)"]
-
-			],
-			"b_nodeb_4g": [
-				["id", "int(19)"],
-				["subnetwork_id", "int(19)"],
-				["name", "varchar(100)"],
-				["gen_id", "varchar(512)"]
-
-			]
+	"chart": {
+		"offset": {
+			"x": 0,
+			"y": 0
 		},
-		"xgeomanager_control": {
-			"measurement_period": [
-				["ID", "int(11)"],
-				["NAME", "varchar(30)"],
-				["DISPLAYNAME", "varchar(80)"],
-				["DESCRIPTION", "varchar(256)"],
-				["OWNER", "varchar(30)"],
-				["CREATEDBY", "varchar(30)"],
-				["CREATIONDATE", "datetime"],
-				["UPDATEDBY", "varchar(30)"],
-				["UPDATEDDATE", "datetime"],
-				["SCHEMANAME", "varchar(30)"],
-				["TRACE_START", "datetime"],
-				["TRACE_DURATION", "int(11)"],
-				["TRACE_GMT", "smallint(6)"],
-				["NETWORKID", "int(11)"],
-				["NETWORKSETTINGID", "int(11)"],
-				["REQUESTID", "int(11)"],
-				["USERCATEGORYID", "int(11)"],
-				["TM_REQUESTID", "int(11)"],
-				["STATUS", "varchar(20"]
+		"nodes": {
+			"1a4aaba2-0dba-4f9b-beb4-33d07c95ca59": {
+				"id": "1a4aaba2-0dba-4f9b-beb4-33d07c95ca59",
+				"position": {
+					"x": 520,
+					"y": 32
+				},
+				"orientation": 0,
+				"type": "input-output",
+				"ports": {
+					"portA": {
+						"id": "portA",
+						"type": "input",
+						"properties": {
+							"value": "yes"
+						},
+						"position": {
+							"x": 100.5,
+							"y": -4.5
+						}
+					},
+					"portB": {
+						"id": "portB",
+						"type": "output",
+						"properties": {
+							"value": "yes"
+						},
+						"position": {
+							"x": 100.5,
+							"y": 77.5
+						}
+					}
+				},
+				"properties": {
+					"custom": "ExcelReaderRule"
+				},
+				"size": {
+					"width": 200,
+					"height": 73
+				}
+			},
+			"e2b186d9-bf30-4868-b420-7e0f6306dd14": {
+				"id": "e2b186d9-bf30-4868-b420-7e0f6306dd14",
+				"position": {
+					"x": 412,
+					"y": 154
+				},
+				"orientation": 0,
+				"type": "input-output",
+				"ports": {
+					"portA": {
+						"id": "portA",
+						"type": "input",
+						"properties": {
+							"value": "yes"
+						},
+						"position": {
+							"x": 100.5,
+							"y": -4.5
+						}
+					},
+					"portB": {
+						"id": "portB",
+						"type": "output",
+						"properties": {
+							"value": "yes"
+						},
+						"position": {
+							"x": 100.5,
+							"y": 77.5
+						}
+					}
+				},
+				"properties": {
+					"custom": "OperateDataFrame"
+				},
+				"size": {
+					"width": 200,
+					"height": 73
+				}
+			}
+		},
+		"links": {
+			"596e5c7d-ebe0-4cf2-ae3f-abc10dcd5964": {
+				"id": "596e5c7d-ebe0-4cf2-ae3f-abc10dcd5964",
+				"from": {
+					"nodeId": "1a4aaba2-0dba-4f9b-beb4-33d07c95ca59",
+					"portId": "portB",
+					"nodeExtraInfo": {
+						"id": "1a4aaba2-0dba-4f9b-beb4-33d07c95ca59",
+						"position": {
+							"x": 520,
+							"y": 32
+						},
+						"orientation": 0,
+						"type": "input-output",
+						"ports": {
+							"portA": {
+								"id": "portA",
+								"type": "input",
+								"properties": {
+									"value": "yes"
+								},
+								"position": {
+									"x": 100.5,
+									"y": -4.5
+								}
+							},
+							"portB": {
+								"id": "portB",
+								"type": "output",
+								"properties": {
+									"value": "yes"
+								},
+								"position": {
+									"x": 100.5,
+									"y": 77.5
+								}
+							}
+						},
+						"properties": {
+							"custom": "ExcelReaderRule"
+						},
+						"size": {
+							"width": 200,
+							"height": 73
+						}
+					}
+				},
+				"to": {
+					"nodeId": "e2b186d9-bf30-4868-b420-7e0f6306dd14",
+					"portId": "portA",
+					"nodeExtraInfo": {
+						"id": "e2b186d9-bf30-4868-b420-7e0f6306dd14",
+						"position": {
+							"x": 412,
+							"y": 154
+						},
+						"orientation": 0,
+						"type": "input-output",
+						"ports": {
+							"portA": {
+								"id": "portA",
+								"type": "input",
+								"properties": {
+									"value": "yes"
+								},
+								"position": {
+									"x": 100.5,
+									"y": -4.5
+								}
+							},
+							"portB": {
+								"id": "portB",
+								"type": "output",
+								"properties": {
+									"value": "yes"
+								},
+								"position": {
+									"x": 100.5,
+									"y": 77.5
+								}
+							}
+						},
+						"properties": {
+							"custom": "OperateDataFrame"
+						},
+						"size": {
+							"width": 200,
+							"height": 73
+						}
+					}
+				}
+			}
+		},
+		"selected": {},
+		"hovered": {}
+	},
 
-
+	"jsonData": {
+		"1a4aaba2-0dba-4f9b-beb4-33d07c95ca59": {
+			"RuleName": "ExcelReader",
+			"Comment": "Excel Reader Rule",
+			"InputKey": "Raw",
+			"FileDetails": [{
+				"FileName": "dd0",
+				"FilePath": "0",
+				"FilePattern": "Pattern0",
+				"ColumnsToInclude": [],
+				"OutputKey": "1a4aaba2-0 _dd0"
+			}]
+		},
+		"e2b186d9-bf30-4868-b420-7e0f6306dd14": {
+			"Type": "Source",
+			"RuleName": "OperateDataFrame",
+			"InputKey": [
+				"1a4aaba2-0 _dd0"
 			],
-			"request": [
-				["ID", "int(11)"],
-				["NAME", "varchar(30)"],
-				["DISPLAYNAME", "varchar(128)"],
-				["DESCRIPTION", "varchar(256)"],
-				["OWNER", "varchar(30)"],
-				["CREATEDBY", "varchar(30)"],
-				["CREATIONDATE", "datetime"],
-				["UPDATEDBY", "varchar(30)"],
-				["UPDATEDDATE", "datetime"],
-				["RECURRENCYID", "smallint(6)"],
-				["RECURRENCYEXPRESSION", "varchar(128)"],
-				["PRIORITY", "smallint(6)"],
-				["START", "datetime"],
-				["EXPIRATIONDATE", "datetime"],
-				["ITKID", "int(11)"],
-				["TASK_MONITORING", "varchar(32)"]
-			],
-			"relation_measurementperiod_processserver": [
-				["ID", "int(11)"],
-				["SOURCEID", "int(11)"],
-				["TARGETID", "int(11)"]
-			],
-			"process_server": [
-				["ID", "int(11)"],
-				["NAME", "varchar(30)"],
-				["DISPLAYNAME", "varchar(80)"],
-				["DESCRIPTION", "varchar(256)"],
-				["OWNER", "varchar(30)"],
-				["CREATEDBY", "varchar(30)"],
-				["CREATIONDATE", "datetime"],
-				["UPDATEDBY", "varchar(30)"],
-				["UPDATEDDATE", "datetime"],
-				["HOST", "varchar(256)"],
-				["PORT", "int(11)"],
-				["APPCONTEXT", "varchar(80)"],
-				["PROCESSORS", "int(11)"],
-				["PRIORITY", "smallint(11)"]
-			]
-
-
+			"OutputKey": "e2b186d9-b _OperateDataFrame",
+			"Operation": [{
+				"Operation": "FindUniqueData",
+				"AdditionalDataSources": []
+			}]
 		}
+
 	}
 }
